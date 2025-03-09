@@ -1,38 +1,45 @@
-<div class="header">
-    <div class="nav-container bg-dark ">
-        <div class="row">
-            <div class="col-lg-4">
- 
-                <nav class="navbar navbar-expand-lg bg-dark border-bottom border-body" data-bs-theme="dark">
-                    <div class="container-fluid">
-                   
-                      <div class="collapse navbar-collapse" id="navbarColor01">
-                        <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-flex align-items-center">
-                          <li class="nav-item">
-                            <a class="nav-link h2 active" aria-current="page" routerLink="">Home</a>
-                          </li>
-                          <li class="nav-item">
-                            <a class="nav-link" routerLink="js-challenge">JS Challenge</a>
-                          </li>
-                          <li class="nav-item">
-                            <a class="nav-link" routerLink="codility-challenge">Codility</a>
-                          </li>
-                        </ul>
-                       
-                      </div>
-                    </div>
-                  </nav>
+<nav class="navbar navbar-expand-lg bg-dark border-bottom border-body" data-bs-theme="dark">
+    <div class="container">
+     
+      <div class="collapse navbar-collapse" id="navbarColor01">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item mx-5">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item  mx-5">
+            <a class="nav-link" href="#">Features</a>
+          </li>
+          <li class="nav-item  mx-5">
+            <a class="nav-link" href="#">Pricing</a>
+          </li>
+          <li class="nav-item  mx-5">
+            <a class="nav-link" routerLink=""  (click)="logOut()">Logout</a>
+          </li>
+        </ul>
+        <div class="d-flex" role="nav-right">
+          <div class="account-icons d-flex align-items-center">
+            <div class="favotie icon mx-3">
+         
+              <span class="material-symbols-outlined">
+                favorite
+                </span>
             </div>
-            <div class="col-lg-4 d-flex align-items-center">
-                <div class="input-group">
+            <div class="user icon mx-3">
+              <span class="material-symbols-outlined">
+                shopping_cart
+                </span>
+            </div>
+            <div class="user icon mx-3">
+              <a routerLink="/dashboard">
+                <span class="material-symbols-outlined">
+                  person
+                  </span>
+              </a>
              
-                    <input type="text" [(ngModel)]="searchInput" (keyup)="sendSearchText(searchInput)" class="form-control" placeholder="Search Products" aria-label="Username" aria-describedby="basic-addon1"/>
-                  </div>
             </div>
-            <div class="col-lg-4 d-flex align-items-center">
-              <app-account-header></app-account-header>
-            </div>
+          
+          </div>
         </div>
-      
+      </div>
     </div>
-</div>
+  </nav>

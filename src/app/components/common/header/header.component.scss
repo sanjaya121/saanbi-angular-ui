@@ -1,7 +1,13 @@
-.nav-container {
-  .nav-item {
-    .nav-link {
-      font-size: 20px;
+.navbar {
+    .navbar-nav {
+        .nav-link{
+            font-size: 20px;
+            letter-spacing: 2px;
+            font-family: "Roboto";
+        }
     }
-  }
+    .material-symbols-outlined{
+        color: #fff;
+    }
 }
+

@@ -1,33 +1,35 @@
 import { Routes } from '@angular/router';
-import { ProductDetailsComponent } from './components/routes/products/product-details/product-details.component';
-import { ShoppigCartComponent } from './components/routes/shoppig-cart/shoppig-cart.component';
-import { JSPracticeComponent } from './components/routes/jspractice/jspractice.component';
-import { CodilityComponent } from './components/routes/codility/codility.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { HomeComponent } from './home/home.component';
+import { authGaurd } from './auth-gaurds/auth-gaurd.guard';
+import { LoginComponent } from './components/routes/login/login.component';
+import { SignUpComponent } from './components/routes/sign-up/sign-up.component';
+
+
 
 export const routes: Routes = [
     {
         path:"",
-        loadChildren:()=>import('./home/home.module').then(module=>module.HomeModule)
+        component:HomeComponent,
+        loadChildren:()=>import('./home/home.module').then(m=>m.HomeModule)
+
+    },
+
+    {
+        path: "dashboard",
+        component:DashboardComponent,
+        loadChildren: () => import('./dashboard/dashboard.module').then(m => m.DashboardModule),
+        canActivate:[authGaurd]
     },
     {
-        path:"products/:id",
-        component:ProductDetailsComponent,
-        title:"Product Details"
+        path:'login',
+        component:LoginComponent,
+        
     },
     {
-        path:"shopping-cart",
-        component:ShoppigCartComponent,
-        title:"Shpping Cart"
-    },
-    {
-        path:"js-challenge",
-        component:JSPracticeComponent,
-        title:"JS Challenge"
-    },
-    {
-        path:"codility-challenge",
-        component:CodilityComponent,
-        title:"JS Challenge"
+        path:'signup',
+        component:SignUpComponent
     }
 
+   
 ];
