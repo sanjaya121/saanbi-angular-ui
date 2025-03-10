@@ -34,7 +34,7 @@ export class LoginComponent {
 
   login() {
     const user =  this.auth.login(this.loginForm.value);
-    user.add();
+  
     console.log(user,"loggedin user")
   }
 

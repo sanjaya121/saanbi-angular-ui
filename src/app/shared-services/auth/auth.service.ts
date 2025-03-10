@@ -15,11 +15,11 @@ export class AuthService {
 
   constructor(private http: HttpClient, private router: Router) {
 
-    const token = localStorage.getItem('token');
+    const token = sessionStorage.getItem('token');
     this._isAuthenticated.next(!!token);
   }
 
-//this is used for signup
+  //this is used for signup
   signUpUser = (userData: any) => {
     return this.http.post('http://localhost:8080/signup', userData)
   }
@@ -27,7 +27,7 @@ export class AuthService {
   // login fucntion to loggin
   login = (login: any) => {
     return this.http.post('http://localhost:8080/api/v1/login', login).subscribe((response: any) => {
-      localStorage.setItem('token', response.token)
+      sessionStorage.setItem('token', response.token)
       this._isAuthenticated.next(true);
       this.router.navigate(['/dashboard'])
 
@@ -44,7 +44,7 @@ export class AuthService {
     return (control: AbstractControl): ValidationErrors | null => {
       const password = control.get('password')?.value;
       const confirmPassword = control.get('confirmPassword')?.value;
-  
+
       return password && confirmPassword && password !== confirmPassword ? { passwordMismatch: true } : null;
     };
   }

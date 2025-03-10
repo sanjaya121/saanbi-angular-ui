@@ -8,8 +8,8 @@ export class HomeService {
 
   constructor(private http:HttpClient) { }
 
-  getProducts=()=>{
-    return this.http.get("https://jsonfakery.com/products")
+  getUsers=()=>{
+    return this.http.get("http://localhost:8080/signup")
 
   }
 }
