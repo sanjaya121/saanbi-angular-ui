@@ -4,8 +4,10 @@ import { HomeComponent } from './home/home.component';
 import { authGaurd } from './auth-gaurds/auth-gaurd.guard';
 import { LoginComponent } from './components/routes/login/login.component';
 import { SignUpComponent } from './components/routes/sign-up/sign-up.component';
+import { MoviesComponent } from './home/components/movies/movies.component';
 
 
+MoviesComponent
 
 export const routes: Routes = [
     {
@@ -29,6 +31,10 @@ export const routes: Routes = [
     {
         path:'signup',
         component:SignUpComponent
+    },
+    {
+        path:'movies',
+        component:MoviesComponent
     }
 
    

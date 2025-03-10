@@ -1,0 +1,19 @@
+import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class MoviesService {
+
+  constructor(private http : HttpClient) { }
+
+  getMovies=()=>{
+
+    const api = "https://jsonfakery.com/movies/paginated";
+
+    return this.http.get(api);
+  }
+
+
+}

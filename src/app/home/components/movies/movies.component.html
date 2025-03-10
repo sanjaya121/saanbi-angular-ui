@@ -1,0 +1,23 @@
+<div class="movies-container">
+  <div class="movies-content py-5">
+    <div class="row">
+      @for( movie of movieData;track movie.id){
+      <div class="col-lg-3 mb-5">
+        <div class="card">
+          <img [src]="movie.poster_path" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">
+              This card has supporting text below as a natural lead-in to
+              additional content.
+            </p>
+            <p class="card-text">
+              <small class="text-muted">Last updated 3 mins ago</small>
+            </p>
+          </div>
+        </div>
+      </div>
+      }
+    </div>
+  </div>
+</div>
