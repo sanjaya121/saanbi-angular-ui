@@ -9,7 +9,7 @@ export class ProductService {
   constructor(private http:HttpClient) { }
 
   getProducts=()=>{
-    return this.http.get("https://jsonfakery.com/products")
+    return this.http.get("https://jsonfakery.com/products/paginated")
 
   }
 }

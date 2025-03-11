@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { HomeService } from './services/home.service';
-
-
+import { ProductService } from './services/products.service';
+import { Product } from './models/products.model';
 
 
 @Component({
@@ -12,36 +11,39 @@ import { HomeService } from './services/home.service';
 })
 export class HomeComponent implements OnInit {
 
-  
-  constructor(private homeService: HomeService) {
+  productsInfo: any;
+  products: Product[] = [];
+  categories:any[]=[];
+  constructor(private prodService: ProductService) {
 
 
   }
   ngOnInit(): void {
- 
+    this.loadProducts();
   }
 
-  getDepartmentNamesWithAtLeastTwoStudents = (students: { id: number; name: string; deptids: number[] }[], dept: { id: number; name: string }[]) => {
+  loadProducts = () => {
+    this.prodService.getProducts().subscribe(products => {
 
-    // we want departtment names of all the departments having at least 2 students
-    // console.log(dept,students)
-    const deptCount = {};
-    // students.forEach(student => {
-    //   student.deptids.forEach(deptId => {
-    //     if (deptCount[deptId]) {
-    //       deptCount[deptId]++;
-    //     } else {
-    //       deptCount[deptId] = 1;
-    //     }
-    //   });
-    // });
-    // students.map(student => {
+      this.productsInfo = products;
+      this.products = this.productsInfo.data;
+      console.log("Products", this.products)
+      this.getCategories(this.products)
+      
+    })
+  }
 
-    //   const dep = dept.filter(dept => student.deptids.length == 2)
-    //   console.log("department", dep);
-    // })
 
-  };
-  
+  getCategories=(products)=>{
+    console.log("Categories",products)
+ products.map((cateee,index)=>{
+  const category ={
+    name:cateee.product_category.name
+  }
+    this.categories.push(category)
+    });
+    console.log(this.categories,"singe category arraybsssss")
+  }
+
 
 }
