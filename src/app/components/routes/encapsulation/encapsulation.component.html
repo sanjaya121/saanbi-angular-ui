@@ -1,12 +1,14 @@
 <div class="encapsulation-example">
-    <h1>Emulated Parent</h1>
-    <div class="emulated">
-        <app-emulated></app-emulated>
-    </div>
-     <div class="shadow-dom">
-        <app-shadow-dom></app-shadow-dom>
-    </div>
-     <div class="none-emulated">
-        <app-no-encapsulation></app-no-encapsulation>
-    </div>
+	<h1>Emulated Parent</h1>
+	<button>Button</button>
+	<div class="eulated-components d-flex">
+		<div class="shadow-dom m-5 emulated-box">
+			<app-shadow-dom></app-shadow-dom>
+		</div>
+	</div>
+	<div class="shadow-dom d-flex">
+		<div class="shadow-dom m-5 emulated-box">
+			<app-emulated></app-emulated>
+		</div>
+	</div>
 </div>

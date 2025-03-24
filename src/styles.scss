@@ -4,3 +4,15 @@ html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 @import './forms.scss';
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+h1{
+    color: green;
+}
+
+h1{
+    color: red;
+}
+
+button{
+    background-color: red;
+}
