@@ -13,13 +13,18 @@ export class HomeComponent implements OnInit {
 
   productsInfo: any;
   products: Product[] = [];
-  categories:any[]=[];
+  categories: any[] = [];
   constructor(private prodService: ProductService) {
 
 
   }
   ngOnInit(): void {
     this.loadProducts();
+    let a = [1, 2, 3];
+    let b = a;
+    b[0] = 100;
+    console.log("sssssss",a);
+    console.log("skjflkasjflksjadfl",[])
   }
 
   loadProducts = () => {
@@ -29,20 +34,28 @@ export class HomeComponent implements OnInit {
       this.products = this.productsInfo.data;
       console.log("Products", this.products)
       this.getCategories(this.products)
-      
+
     })
   }
 
 
-  getCategories=(products)=>{
-    console.log("Categories",products)
- products.map((cateee,index)=>{
-  const category ={
-    name:cateee.product_category.name
-  }
-    this.categories.push(category)
+  getCategories = (products) => {
+    console.log("Categories", products)
+    products.map((cateee, index) => {
+      const category = {
+        name: cateee.product_category.name
+      }
+      this.categories.push(category)
     });
-    console.log(this.categories,"singe category arraybsssss")
+
+    switch ("hello") {
+      case 'hello':
+        console.log("hello world");
+        break
+      default:
+      console.log("Default ")
+
+    }
   }
 
 

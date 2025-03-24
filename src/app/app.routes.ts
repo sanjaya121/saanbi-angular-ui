@@ -5,6 +5,7 @@ import { authGaurd } from './auth-gaurds/auth-gaurd.guard';
 import { LoginComponent } from './components/routes/login/login.component';
 import { SignUpComponent } from './components/routes/sign-up/sign-up.component';
 import { MoviesComponent } from './home/components/movies/movies.component';
+import { SerialsComponent } from './components/routes/serials/serials.component';
 
 
 MoviesComponent
@@ -35,6 +36,11 @@ export const routes: Routes = [
     {
         path:'movies',
         component:MoviesComponent
+    }
+    ,
+    {
+        path: 'serials',
+        component: SerialsComponent
     }
 
    
