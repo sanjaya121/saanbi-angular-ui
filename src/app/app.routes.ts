@@ -7,6 +7,7 @@ import { SignUpComponent } from './components/routes/sign-up/sign-up.component';
 import { MoviesComponent } from './home/components/movies/movies.component';
 import { SerialsComponent } from './components/routes/serials/serials.component';
 import { EncapsulationComponent } from './components/routes/encapsulation/encapsulation.component';
+import { ViewChildComponent } from './components/routes/view-child/view-child.component';
 
 
 MoviesComponent
@@ -46,8 +47,11 @@ export const routes: Routes = [
     {
         path: 'view-encapsulation',
         component: EncapsulationComponent
+    },
+{
+        path: 'view-child',
+        component: ViewChildComponent
     }
-
 
     
    
