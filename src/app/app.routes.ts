@@ -6,6 +6,7 @@ import { LoginComponent } from './components/routes/login/login.component';
 import { SignUpComponent } from './components/routes/sign-up/sign-up.component';
 import { MoviesComponent } from './home/components/movies/movies.component';
 import { SerialsComponent } from './components/routes/serials/serials.component';
+import { EncapsulationComponent } from './components/routes/encapsulation/encapsulation.component';
 
 
 MoviesComponent
@@ -41,7 +42,13 @@ export const routes: Routes = [
     {
         path: 'serials',
         component: SerialsComponent
+    },
+    {
+        path: 'view-encapsulation',
+        component: EncapsulationComponent
     }
 
+
+    
    
 ];

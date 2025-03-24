@@ -3,7 +3,7 @@
 
 	.flex-demo {
 		display: flex;
-        height: 600px;
+        flex-direction: column-reverse;
         justify-content: flex-start;
 		.flex-box {
 			border: 2px solid #00ee10;
