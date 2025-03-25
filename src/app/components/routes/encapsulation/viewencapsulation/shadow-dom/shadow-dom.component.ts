@@ -1,4 +1,4 @@
-import { Component, ViewEncapsulation } from '@angular/core';
+import { Component, viewChild, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'app-shadow-dom',
@@ -6,7 +6,7 @@ import { Component, ViewEncapsulation } from '@angular/core';
   imports: [],
   templateUrl: './shadow-dom.component.html',
   styleUrl: './shadow-dom.component.scss',
-
+  encapsulation:ViewEncapsulation.ShadowDom
 })
 export class ShadowDomComponent {
 

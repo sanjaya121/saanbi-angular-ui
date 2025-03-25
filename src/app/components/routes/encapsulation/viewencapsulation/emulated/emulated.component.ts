@@ -7,6 +7,7 @@ import { Component, ViewEncapsulation } from '@angular/core';
   templateUrl: './emulated.component.html',
   styleUrl: './emulated.component.scss',
 
+
 })
 export class EmulatedComponent {
 

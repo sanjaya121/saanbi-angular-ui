@@ -8,7 +8,7 @@ import { ShadowDomComponent } from "./viewencapsulation/shadow-dom/shadow-dom.co
   imports: [EmulatedComponent,ShadowDomComponent],
   templateUrl: './encapsulation.component.html',
   styleUrl: './encapsulation.component.scss',
-  encapsulation:ViewEncapsulation.Emulated
+  encapsulation:ViewEncapsulation.None
 })
 export class EncapsulationComponent {
 
